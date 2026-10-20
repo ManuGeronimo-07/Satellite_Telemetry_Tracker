@@ -1,17 +1,6 @@
 import time
-
 class LcdApi:
-    """Implements the API for talking with HD44780 compatible character LCDs.
-    This class only knows what commands to send to the LCD, and not how to get
-    them to the LCD.
 
-    It is expected that a derived class will implement the hal_xxx functions.
-    """
-
-    # The following constant names were lifted from the avrlib lcd.h
-    # header file, however, I changed the definitions from bit numbers
-    # to bit masks.
-    #
     # HD44780 LCD controller command set
 
     LCD_CLR = 0x01              # DB0: clear display
@@ -201,11 +190,7 @@ class LcdApi:
         """
         raise NotImplementedError
 
-    # This is a default implementation of hal_sleep_us which is suitable
-    # for most micropython implementations. For platforms which don't
-    # support `time.sleep_us()` they should provide their own implementation
-    # of hal_sleep_us in their hal layer and it will be used instead.
     def hal_sleep_us(self, usecs):
         """Sleep for some time (given in microseconds)."""
-        time.sleep_us(usecs)  # NOTE this is not part of Standard Python library, specific hal layers will need to override this
+        time.sleep_us(usecs)
     
