@@ -26,11 +26,10 @@ myLongitude = -71.0880961
 ts = load.timescale()
 
 #Fetching ISS TLE data
-#Temporarily commented out to avoid hitting the firewall
-#tleURL = "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE"
-#response = requests.get(tleURL)
-#with open('iss_tle.txt', 'w') as f:
-    #f.write(response.text)
+tleURL = "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE"
+response = requests.get(tleURL)
+with open('iss_tle.txt', 'w') as f:
+    f.write(response.text)
 
 #Loading the local file directly
 satellites = load.tle_file('iss_tle.txt')
