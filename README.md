@@ -9,3 +9,7 @@ A distributed embedded system that pulls live orbital Two-Line Element (TLE) dat
 - **Distributed System Pipeline:** Offloaded heavy mathematical aerospace coordinate processing to a Python host client, establishing a serial USB link layer to interact smoothly with resource-constrained microcontroller hardware.
 - **Telemetry Data Caching:** Implemented local file-system caching for satellite parameter data, optimizing system tracking logic to process 0.5-second snappier runtime display loops while cutting external network traffic down to absolute zero.
 - **Embedded Driver Integration:** Wrote a low-overhead stream parser on the Pico to decode packet data strings on-the-fly and map metrics over an I2C communication bus to a 16x2 character grid interface.
+
+## Contributions
+- Designed and implemented the embedded flight software architecture on a Raspberry Pi Pico using MicroPython. Wired and configured an I2C 1602 LCD layout. Built a robust serialization parser to process incoming real-time coordinated data frames over a USB serial connection.
+- Utilized AI generation alongside the Skyfield documentation to architect the initial laptop ground station orbital calculation scripts.
