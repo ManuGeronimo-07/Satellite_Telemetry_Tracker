@@ -1,4 +1,4 @@
-#Manus Two-Line Element (TLE) Satellite Pass Predictor & Visualizer (MicroPython Script)
+#TLE Satellite Pass Predictor & Visualizer (MicroPython)
 #Creating a Python script to fetch the TLE data from the internet and calculate the satellite passes
 #Computer will sent a simple signal over the USB cable to the Raspberry Pi Pico
 
